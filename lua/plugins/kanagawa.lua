@@ -3,10 +3,9 @@ return {
 	priority = 1000,
 	opts = {
 		theme = "wave",
-		transparent = false,
+		transparent = true,
 	},
 	config = function(_, opts)
 		require("kanagawa").setup(opts)
-		vim.cmd.colorscheme("kanagawa")
 	end,
 }

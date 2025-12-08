@@ -9,3 +9,5 @@ require("config.keymaps")
 require("lazy").setup("plugins")
 -- let nvim know if you have a nerd font
 vim.g.have_nerd_font = true
+-- colorscheme
+vim.cmd.colorscheme("kanagawa")
