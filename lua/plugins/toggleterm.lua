@@ -10,7 +10,7 @@ return {
       float_opts = { border = "curved" },
     })
     -- normal split terminal
-    vim.keymap.set("n", "<leader>tt", "<Cmd>ToggleTerm<CR>", { desc = "Toggle term as split" })
+    vim.keymap.set("n", "<leader>t", "<Cmd>ToggleTerm<CR>", { desc = "Toggle term as split" })
 
     -- floating terminal
     vim.keymap.set("n", "<leader>tf", "<Cmd>ToggleTerm direction=float<CR>", { desc = "Toggle term as float" })

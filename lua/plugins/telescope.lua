@@ -9,6 +9,11 @@ return {
 				["ui-select"] = {
 					require("telescope.themes").get_dropdown(),
 				},
+        pickers = {
+          find_files = {
+            hidden = false 
+          }
+        },
 			},
 		})
 

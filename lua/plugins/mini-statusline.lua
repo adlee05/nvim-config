@@ -1,4 +1,4 @@
 return { 
-  "echasnovski/mini.statusline", 
-  config = true 
+  -- "echasnovski/mini.statusline", 
+  -- config = true 
 }

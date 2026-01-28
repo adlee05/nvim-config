@@ -8,13 +8,38 @@ return {
 		"saghen/blink.cmp",
 	},
 	config = function()
+		-- ts/js
 		vim.lsp.config.ts_ls = {
 			filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact" },
 		}
+
+		-- r_language_server
+
+		vim.lsp.config("r_language_server", {
+			settings = {
+				r = {
+					lsp = {
+						diagnostics = true,
+					},
+				},
+			},
+		})
+		vim.lsp.enable("r_language_server")
+
+		-- setup
 		vim.lsp.enable("clangd")
-		vim.lsp.enable("eslint-lsp")
+		vim.lsp.enable("dockerls")
+		vim.lsp.enable("cssls")
+    vim.lsp.enable("jsonls")
+		vim.lsp.enable("lua_ls")
+		vim.lsp.enable("cpplint")
+		vim.lsp.enable("pyright")
 		vim.lsp.enable("prettierd")
 		vim.lsp.enable("ts_ls")
+    vim.lsp.enable("harper")
+    vim.lsp.config.harper_ls = {
+      filetypes = {"markdown", "text", "gitcommit"},
+    }
 
 		-- keymap
 		vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "Format buffer (LSP)" })
